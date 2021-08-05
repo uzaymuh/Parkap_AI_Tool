@@ -3,7 +3,7 @@ from os import startfile
 import tkinter as tk
 from tkinter import Tk, Label
 from PIL import Image, ImageTk
-image = Image.open('afyon1.png').convert('RGB')
+image = Image.open('nigde1.png').convert('RGB')
 crop_rectangle = (439, 234, 595, 299)
 cropped_im = image.crop(crop_rectangle)
 
@@ -136,7 +136,7 @@ class Application(tk.Frame):
     def __init__(self, parent, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
 
-        path = "afyon1.png"
+        path = "nigde1.png"
         img = ImageTk.PhotoImage(Image.open(path))
         self.canvas = tk.Canvas(root, width=img.width(), height=img.height(),
                                 borderwidth=0, highlightthickness=0)

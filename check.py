@@ -1,7 +1,7 @@
 from PIL import Image, ImageTk,  ImageDraw
 import uuid
 
-img = Image.open('afyon2.png').convert('RGB')
+img = Image.open('afyon3.png').convert('RGB')
 lines = []
 with open('sa.txt') as f:
     lines = f.readlines()
