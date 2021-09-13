@@ -3,7 +3,8 @@ from os import startfile
 import tkinter as tk
 from tkinter import Tk, Label
 from PIL import Image, ImageTk
-image = Image.open('Screenshot_12.png').convert('RGB')
+imgname="shot.png"
+image = Image.open(imgname).convert('RGB')
 crop_rectangle = (439, 234, 595, 299)
 cropped_im = image.crop(crop_rectangle)
 
@@ -135,7 +136,7 @@ class Application(tk.Frame):
     def __init__(self, parent, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
 
-        path = "Screenshot_12.png"
+        path = imgname
         img = ImageTk.PhotoImage(Image.open(path))
         self.canvas = tk.Canvas(root, width=img.width(), height=img.height(),
                                 borderwidth=0, highlightthickness=0)
@@ -162,7 +163,7 @@ class Application(tk.Frame):
 
 def key_pressed(event):
     print(event.char)
-    with open('sa.txt', 'a') as f:
+    with open('box.txt', 'a') as f:
         f.write(str(s[0])+" "+str(s[1])+" "+str(e[0])+" "+str(e[1])+'\n')
 
 
